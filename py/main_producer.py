@@ -22,7 +22,9 @@ class Country:
 
 if __name__ == '__main__':
 
-    producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
+
+    producer = KafkaProducer\
+        (bootstrap_servers=['localhost:9092'],
         #value_serializer = lambda x: dumps(x).encode('utf-8'),
         value_serializer=lambda v: jsonpickle.encode(v,unpicklable=False).encode('utf-8'),
         key_serializer = lambda k: jsonpickle.encode(k,unpicklable=False).encode('utf-8')

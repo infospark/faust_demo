@@ -5,7 +5,7 @@ class IdKey(faust.Record, serializer='json'):
     id: str
 
 
-class Scrape_Request(faust.Record, serializer='json'):
+class ScrapeRequest(faust.Record, serializer='json'):
     url: str  # e.g. https://www.glassdoor.co.uk/Reviews/Hastings-Direct-Reviews-E230322.htm
     destination_topic: str  # Do I need this?
     # What else?
